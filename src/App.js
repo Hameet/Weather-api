@@ -5,7 +5,7 @@ import './App.css';
 // import Titles from './components/Titles'
 import Form from './components/Form'
 import Weather from './components/Weather'
-import Animate from './components/Animate'
+import Display from './components/Display'
 
 
 const API_KEY = "c1891d3950ee986634407066ad151b06"
@@ -54,7 +54,9 @@ class App extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-xs-5 title-container">
-                    <Animate/>
+                    <Display
+                    temperature={this.state.temperature}
+                    />
                   </div>
                 <div className="col-xs-7 form-container">
                   <Form getWeather={this.getWeather}/>

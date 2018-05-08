@@ -1,5 +1,12 @@
 import React from 'react'
+import ReactAnimatedWeather from 'react-animated-weather';
 
+const defaults = {
+  icon: 'CLEAR_NIGHT',
+  color: 'red',
+  size: 200,
+  animate: true
+};
 
  const Weather = props => {
     
@@ -32,6 +39,7 @@ import React from 'react'
                     </p>
                 }
             </div>
+         
         )
 }
 
