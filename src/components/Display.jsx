@@ -36,7 +36,6 @@
       animationData = sunny
     } else {
      animationData = cloudy
-     console.log('ffff', this.state)
     }
         this.setState({
         animationData: animationData,
@@ -45,8 +44,7 @@
     }
 
     componentWillReceiveProps(nextProps) { 
-    console.log('comp', nextProps)
-    if (this.props !== nextProps) {
+      if (this.props !== nextProps) {
         this.setState(nextProps, this.getanimation)
       } else {
       this.getanimation()  
