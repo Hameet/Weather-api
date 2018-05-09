@@ -14,9 +14,9 @@
     "webpack": "^4.8.1"
   },
   "scripts": {
-    "start": "yarn run react-scripts start",
-    "build": "yarn run react-scripts build",
-    "test": "yarn run react-scripts test --env=jsdom",
-    "eject": "yarn run react-scripts eject"
+    "start": "node server/index",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
