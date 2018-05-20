@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "react": "^16.2.0",
+    "react-animated-weather": "^1.0.3",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0"
   },

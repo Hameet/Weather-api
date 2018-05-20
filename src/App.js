@@ -1,6 +1,6 @@
 import React from "react";
 
-import Titles from "./components/Titles";
+import Display from "./components/Display";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 
@@ -50,7 +50,8 @@ class App extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-xs-5 title-container">
-                  <Titles />
+                  <Display
+                  temperature={this.state.temperature} />
                 </div>
                 <div className="col-xs-7 form-container">
                   <Form getWeather={this.getWeather} />
