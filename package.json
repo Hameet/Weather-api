@@ -10,8 +10,7 @@
     "react-animated-weather": "^1.0.3",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
-    "server": "^1.0.18",
-    "webpack": "^4.8.1"
+    "server": "^1.0.18"
   },
   "scripts": {
     "start": "react-scripts start",
