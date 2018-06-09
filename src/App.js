@@ -13,6 +13,7 @@ class App extends React.Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
+    id: undefined,
     error: undefined
   }
   getWeather = async (e) => {
@@ -22,13 +23,29 @@ class App extends React.Component {
     const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     console.log(data)
-    if (city && country) {
+     
+    if(data.cod == 404){
+           this.setState({
+             temperature: undefined,
+             city: undefined,
+             country: undefined,
+             humidity: undefined,
+             description: undefined,
+             error: "Please make sure your inputs are valid.",
+             min_temperature: undefined,
+             max_temperature: undefined,
+             icon: null,
+             wind: undefined
+    });
+  }
+   else if (city && country) {
       this.setState({
         temperature: data.main.temp,
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description,
+        id: data.weather[0].id,
         error: ""
       });
     } else {
@@ -38,6 +55,7 @@ class App extends React.Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
+        id: undefined,
         error: "Please enter the values."
       });
     }
@@ -51,7 +69,7 @@ class App extends React.Component {
               <div className="row">
                 <div className="col-xs-5 title-container">
                   <Display
-                  temperature={this.state.temperature} />
+                  id={this.state.id} />
                 </div>
                 <div className="col-xs-7 form-container">
                   <Form getWeather={this.getWeather} />
