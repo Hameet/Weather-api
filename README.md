@@ -1,8 +1,8 @@
-Weather api with animation using 'react-animated-weather'
+# Weather api with animation using 'react-animated-weather'
 
-This project involves integrating the 'react-animated-weather' npm package to work in tandem with the openweathermap API. 
+## This project involves integrating the 'react-animated-weather' npm package to work in tandem with the openweathermap API. 
 
-Challanges faced by me:
+# Challanges faced by me:
 1) While accessing the API was easy enough integrating the weather animation package required some brain storming
 2) There are way too many weather codes for different conditions, still looking for a better alternative than using a For loop
 3) Information provided by the weather API is also limited and sometimes inaccurate
